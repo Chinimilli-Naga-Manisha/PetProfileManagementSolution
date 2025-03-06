@@ -1,0 +1,25 @@
+# Ignore build and bin/obj folders
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+*.vscode
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+project.lock.json
+
+# Ignore log and temporary files
+logs/
+*.log
+*.tmp
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Ignore published files
+publish/

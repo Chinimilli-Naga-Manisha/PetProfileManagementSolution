@@ -1,0 +1,63 @@
+﻿ @model PetProfileManagementFrontend.Models.Pet
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Create New Pet</h2>
+
+    <form asp-action="Create" method="post">
+        <!-- Pet Name -->
+        <div class="form-group mb-4">
+            <label for="Name" class="font-weight-bold">Pet Name</label>
+            <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" placeholder="Enter Pet's Name" required />
+        </div>
+
+        <!-- Owner Name -->
+        <div class="form-group mb-4">
+            <label for="OwnerName" class="font-weight-bold">Owner Name</label>
+            <input type="text" class="form-control" id="OwnerName" name="OwnerName" value="@Model.OwnerName" placeholder="Enter Owner's Name" required />
+        </div>
+
+        <!-- Species -->
+        <div class="form-group mb-4">
+            <label for="Species" class="font-weight-bold">Species</label>
+            <input type="text" class="form-control" id="Species" name="Species" value="@Model.Species" placeholder="Enter Pet's Species" required />
+        </div>
+
+        <!-- Breed -->
+        <div class="form-group mb-4">
+            <label for="Breed" class="font-weight-bold">Breed</label>
+            <input type="text" class="form-control" id="Breed" name="Breed" value="@Model.Breed" placeholder="Enter Pet's Breed" required />
+        </div>
+
+        <!-- Age -->
+        <div class="form-group mb-4">
+            <label for="Age" class="font-weight-bold">Age (in years)</label>
+            <input type="number" class="form-control" id="Age" name="Age" value="@Model.Age" placeholder="Enter Pet's Age" required />
+        </div>
+
+        <!-- Color -->
+        <div class="form-group mb-4">
+            <label for="Color" class="font-weight-bold">Color</label>
+            <input type="text" class="form-control" id="Color" name="Color" value="@Model.Color" placeholder="Enter Pet's Color" required />
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-group mb-4">
+            <label for="DateOfBirth" class="font-weight-bold">Date of Birth</label>
+            <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")" required />
+        </div>
+
+        <!-- Medical History -->
+        <div class="form-group mb-4">
+            <label for="MedicalHistory" class="font-weight-bold">Medical History</label>
+            <textarea class="form-control" id="MedicalHistory" name="MedicalHistory" placeholder="Enter Medical History of the Pet">@Model.MedicalHistory</textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-4 py-2">Save Pet</button>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap Icons (Optional for adding some icons) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

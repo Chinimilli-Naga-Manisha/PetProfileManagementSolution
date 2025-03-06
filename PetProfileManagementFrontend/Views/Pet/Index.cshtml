@@ -1,0 +1,53 @@
+﻿@model List<PetProfileManagementFrontend.Models.Pet>
+
+@{
+    ViewData["Title"] = "Pets Directory";
+}
+
+<div class="container my-4">
+    <h2 class="text-center mb-4">Pets Directory</h2>
+
+    <!-- Add Pet Button -->
+    <a href="@Url.Action("Create", "Pet")" class="btn btn-primary mb-3">Add Pet</a>
+
+    <!-- Pets Table -->
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Owner Name</th>
+                <th scope="col">Species</th>
+                <th scope="col">Breed</th>
+                <th scope="col">Age</th>
+                <th scope="col">Color</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Medical History</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pet in Model)
+            {
+                <tr>
+                    <td>@pet.Name</td>
+                    <td>@pet.OwnerName</td>
+                    <td>@pet.Species</td>
+                    <td>@pet.Breed</td>
+                    <td>@pet.Age</td>
+                    <td>@pet.Color</td>
+                    <td>@pet.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                    <td>@pet.MedicalHistory</td>
+                    <td>
+                        <!-- Edit Pet Button -->
+                        <a href="@Url.Action("Edit", "Pet", new { id = pet.Id })" class="btn btn-warning btn-sm">Edit</a>
+
+                        <!-- Delete Pet Button -->
+                        <form method="post" asp-action="Delete" asp-route-id="@pet.Id" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this pet?')">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
