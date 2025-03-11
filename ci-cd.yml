@@ -3,10 +3,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - PetProfileMgmtSol--Chinimilli-Naga-Manisha
+      - master
   pull_request:
     branches:
-      - PetProfileMgmtSol--Chinimilli-Naga-Manisha
+      - master
 
 jobs:
   build:
