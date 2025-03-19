@@ -21,7 +21,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '7.0.x' # Adjust this to your preferred .NET version
+          dotnet-version: '8.0.x'
 
       # Skipping the build step here
 
