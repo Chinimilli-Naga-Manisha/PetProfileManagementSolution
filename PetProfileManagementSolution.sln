@@ -14,11 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git Ignore File", "Git Igno
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetProfileManagementBackend.Tests", "PetProfileManagementBackend.Tests\PetProfileManagementBackend.Tests.csproj", "{F11ED087-610C-47C8-9A7E-E65CA6F1711E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{97876AE4-789E-41A3-BBBF-58EAF898E6C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{28BEF238-5D85-40A7-9776-B30267C889A0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{1E5C2376-97F8-489D-A4C2-0492661F8991}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CCF458F5-7324-47A1-A6C7-4A29655DD826}"
 	ProjectSection(SolutionItems) = preProject
-		CI_CD.yml = CI_CD.yml
+		ci-cd.yml = ci-cd.yml
 	EndProjectSection
 EndProject
 Global
@@ -44,6 +44,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1E5C2376-97F8-489D-A4C2-0492661F8991} = {97876AE4-789E-41A3-BBBF-58EAF898E6C6}
+		{CCF458F5-7324-47A1-A6C7-4A29655DD826} = {28BEF238-5D85-40A7-9776-B30267C889A0}
 	EndGlobalSection
 EndGlobal
