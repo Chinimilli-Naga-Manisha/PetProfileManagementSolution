@@ -67,5 +67,19 @@ namespace PetProfileManagementBackend.Tests
             Assert.NotNull(result);
             Assert.Equal(404, result.StatusCode);
         }
+        [Fact]
+        public void CreatePet_ShouldReturnBadRequest_WhenModelStateIsInvalid()
+        {
+            // Arrange
+            var newPet = new Pet(); // Missing required fields like Name, Species, etc.
+            _petsController.ModelState.AddModelError("Name", "Required");
+
+            // Act
+            var result = _petsController.CreatePet(newPet) as BadRequestObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(400, result.StatusCode);
+        }
     }
 }
