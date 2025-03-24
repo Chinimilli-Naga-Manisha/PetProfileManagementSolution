@@ -32,7 +32,6 @@ namespace PetProfileManagementBackend.Tests
                 var index = _mockPets.FindIndex(p => p.Id == updatedPet.Id);
                 if (index != -1) _mockPets[index] = updatedPet;
             });
-            //  _petServiceMock.Setup(x => x.GetPetsByOwner(It.IsAny<string>())).Returns((string owner) => _mockPets.Where(p => p.OwnerName == owner).ToList());
         }
 
         [Fact]
