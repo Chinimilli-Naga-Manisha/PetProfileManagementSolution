@@ -53,6 +53,17 @@ builder.Services.AddRazorPages(); // Added support for Razor Pages
 
 // Register HttpClient to make API calls
 builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("NoSSL", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:5001/");
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+    };
+});
 
 // Build the app.
 var app = builder.Build();

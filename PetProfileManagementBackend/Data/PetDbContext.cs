@@ -15,5 +15,6 @@ namespace PetProfileManagementBackend.Data
 
         // Define your DbSets here
         public DbSet<Pet> Pet { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

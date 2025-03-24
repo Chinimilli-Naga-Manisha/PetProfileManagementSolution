@@ -13,6 +13,8 @@ builder.Services.AddDbContext<PetDbContext>(options =>
 
 // Register the PetService (Service Layer) with Dependency Injection
 builder.Services.AddScoped<IPetService, PetService>();
+builder.Services.AddSingleton<ProductService>();
+
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 // Add controllers as services
