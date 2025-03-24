@@ -98,20 +98,5 @@ namespace PetProfileManagementBackend.Tests
             Assert.NotNull(pet);
             Assert.Equal("Max", pet.Name);
         }
-
-        //[Fact]
-        //public void GetPetsByOwner_ShouldReturnPets_WhenOwnerExists()
-        //{
-        //    var pets = _petServiceMock.Object.GetPetsByOwner("Jane Doe");
-        //    Assert.Single(pets);
-        //    Assert.Equal("Kitty", pets[0].Name);
-        //}
-
-        //[Fact]
-        //public void GetPetsByOwner_ShouldReturnEmptyList_WhenOwnerHasNoPets()
-        //{
-        //    var pets = _petServiceMock.Object.GetPetsByOwner("Alice");
-        //    Assert.Empty(pets);
-        //}
     }
 }
