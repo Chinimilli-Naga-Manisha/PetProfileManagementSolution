@@ -2,6 +2,9 @@
 
 <h2>Product List</h2>
 <a asp-action="Create" class="btn btn-primary">Add New Product</a>
+@* <a href="@Url.Action("Index","Pet")" class="btn btn-primary mb-3">Pets Directory</a> *@
+<a asp-action="Index" asp-controller="Pet" class="btn btn-primary">Pets Directory</a>
+
 
 <table class="table table-striped">
     <thead>
